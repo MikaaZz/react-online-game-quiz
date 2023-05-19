@@ -23,7 +23,7 @@ function UserInfos({ userName, userAllPoints, isUserData }) {
       <Box>
         <Typography sx={{ fontWeight: 'bold', fontFamily: 'poppins' }}>{userName}</Typography>
         <Typography sx={{ fontSize: '14px', fontFamily: 'poppins' }}>
-          {userAllPoints} pontos
+          {userAllPoints} points
         </Typography>
       </Box>
     </Box>

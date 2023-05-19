@@ -18,10 +18,10 @@ function StepDisplay({ stepNumber, stepName, stepTime, stepPoints }) {
           color: '#293591',
           textTransform: 'uppercase',
           padding: '.5rem 2rem',
-          fontFamily: 'Gameplay',
+
           fontWeight: 'bold',
         }}>
-        Etapa {stepNumber}
+        Step {stepNumber}
       </Typography>
       <Box
         sx={{

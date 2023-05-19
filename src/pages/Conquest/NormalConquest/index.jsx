@@ -43,14 +43,14 @@ function NormalConquest() {
           sx={{
             color: '#fff',
             fontSize: '60px',
-            fontFamily: 'Gameplay',
+
             textTransform: 'uppercase',
             textAlign: { xs: 'center', lg: 'left' },
             textShadow: '4px 8px 0px #2A3690',
             zIndex: '10',
             fontWeight: 'bold',
           }}>
-          Conquistas
+          Conquest
         </Typography>
       </Box>
       <Box

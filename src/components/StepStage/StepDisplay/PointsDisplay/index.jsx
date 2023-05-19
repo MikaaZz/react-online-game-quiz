@@ -6,8 +6,8 @@ function PointsDisplay({stepPoints = 0, stepTime = 0}) {
   const seconds = ((stepTime % 60000) / 1000).toFixed(0);
 
   return (
-    <Typography sx={{ color: 'white', fontFamily: 'Gameplay', }}>
-      {stepPoints} Pontos | {minutes}:{seconds < 10 ? '0' : ''}{seconds}
+    <Typography sx={{ color: 'white',  }}>
+      {stepPoints} Points | {minutes}:{seconds < 10 ? '0' : ''}{seconds}
     </Typography>
   )
 }

@@ -13,7 +13,7 @@ function StepNumber({ stepNumber }) {
         sx={{
           color: '#293591',
           fontSize: '40px',
-          fontFamily: 'Gameplay',
+
           fontWeight: 'bold',
         }}>
         {stepNumber}

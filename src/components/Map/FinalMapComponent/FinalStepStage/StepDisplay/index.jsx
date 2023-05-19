@@ -33,10 +33,10 @@ function StepDisplay({ stepTime }) {
           color: '#293591',
           textTransform: 'uppercase',
           padding: '.5rem 2rem',
-          fontFamily: 'Gameplay',
+
           fontWeight:'bold'
         }}>
-        Faltam
+        To
       </Typography>
       <Box
         sx={{
@@ -52,13 +52,13 @@ function StepDisplay({ stepTime }) {
             maxWidth: '320px',
             textAlign: 'center',
             fontSize: { xs: '14px', xl: '16px' },
-            fontFamily: 'Gameplay',
+
             textTransform: 'uppercase',
             fontWeight:'bold'
           }}>
           {stepTime < new Date()
-            ? 'Etapa liberada!'
-            : `${days} dias, ${hours} horas, ${minutes} minutos`}
+            ? 'Step available!'
+            : `${days} days, ${hours} hours, ${minutes} minutes`}
         </Typography>
         <PointsDisplay isDisponible={stepTime < new Date()} />
       </Box>

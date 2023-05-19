@@ -18,7 +18,7 @@ function CollectInfos() {
 
   const [sumbitSent, setSumbitSent] = useState(false)
 
-  const user = new User()
+  const user = new User
 
   function handleNameChange(event) {
     setName(event.target.value)
@@ -131,7 +131,7 @@ function CollectInfos() {
               fontFamily: 'Poppins',
               textAlign: { xs: 'center'},
             }}>
-            Ei, Lwarter, antes de começar, preencha os campos abaixo 😄
+            Hey, before you start, fill in the fields below 😄
           </Typography>
           <TextField
             sx={{
@@ -140,7 +140,7 @@ function CollectInfos() {
               fieldset: { border: '1px solid #ffffffca' },
             }}
             id='name_input'
-            label='Nome:'
+            label='Name:'
             value={name}
             onChange={handleNameChange}
             onBlur={validateName}
@@ -155,7 +155,7 @@ function CollectInfos() {
               fieldset: { border: '1px solid #ffffffca' },
             }}
             id='position_input'
-            label='Departamento:'
+            label='Position:'
             value={position}
             onChange={handlePositionChange}
             onBlur={validatePosition}
@@ -170,7 +170,7 @@ function CollectInfos() {
               fieldset: { border: '1px solid #ffffffca' },
             }}
             id='role_input'
-            label='Cargo:'
+            label='Role:'
             value={role}
             onChange={handleRoleChange}
             onBlur={validateRole}
@@ -185,7 +185,7 @@ function CollectInfos() {
               fieldset: { border: '1px solid #ffffffca' },
             }}
             id='role_input'
-            label='Cidade onde trabalha:'
+            label='City:'
             value={city}
             onChange={handleCityChange}
             onBlur={validateCity}

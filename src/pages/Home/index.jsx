@@ -52,11 +52,11 @@ function Home() {
         }}>
         {isLogin ? (
           <Link to={'/mapa'}>
-            <MainButton>Jogar</MainButton>
+            <MainButton>Play</MainButton>
           </Link>
         ) : (
           <Link to={'/registro'}>
-            <MainButton>Registrar-se</MainButton>
+            <MainButton>Register</MainButton>
           </Link>
         )}
       </Box>

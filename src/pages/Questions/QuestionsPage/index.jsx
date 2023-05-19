@@ -1,20 +1,17 @@
 import {
   Box,
-  Button,
   FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
   Typography,
 } from '@mui/material'
-import QuestionTimer from '../../../components/QuestionTimer'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { User } from '../../../firebase'
 import { onValue } from '@firebase/database'
 import {
-  backIcon,
   backgroundImage,
   backgroundShape,
   clockIcon,
@@ -62,12 +59,7 @@ function QuestionsPage({
 
   const list_steps = [
     'fase01',
-    'fase02',
-    'fase03',
-    'fase04',
-    'fase05',
-    'fase06',
-    'fase07',
+    'fase02'
   ]
   const user = new User()
 
@@ -103,18 +95,13 @@ function QuestionsPage({
         onClick={() => {
           handleSubmit()
         }}>
-        Enviar
+        Submit
       </button>
     )
   }
   function nextPage() {
     if (
-      parseFloat(questionNumberFromUrl.questionNumber) === 10 ||
-      parseFloat(questionNumberFromUrl.questionNumber) === 20 ||
-      parseFloat(questionNumberFromUrl.questionNumber) === 30 ||
-      parseFloat(questionNumberFromUrl.questionNumber) === 40 ||
-      parseFloat(questionNumberFromUrl.questionNumber) === 50 ||
-      parseFloat(questionNumberFromUrl.questionNumber) === 60
+      parseFloat(questionNumberFromUrl.questionNumber) === 10
     ) {
       return (
         <Link to={`/conquistas`}>
@@ -125,12 +112,12 @@ function QuestionsPage({
               writeUserStepStop()
               setUserScore(0)
             }}>
-            Finalizar etapa
+            Finish step
           </button>
         </Link>
       )
     }
-    if (parseFloat(questionNumberFromUrl.questionNumber) === 70) {
+    if (parseFloat(questionNumberFromUrl.questionNumber) === 20) {
       return (
         <Link to={`/conquistasfinais`}>
           <button
@@ -139,7 +126,7 @@ function QuestionsPage({
               setUserRespondQuestion(false)
               setUserScore(0)
             }}>
-            Finalizar etapa
+            Finish step
           </button>
         </Link>
       )
@@ -154,7 +141,7 @@ function QuestionsPage({
             setStartTimer(true)
             setUserScore(0)
           }}>
-          Próxima questão
+          Next question
         </button>
       </Link>
     )
@@ -255,9 +242,9 @@ function QuestionsPage({
                 color: '#293591',
                 textAlign: 'center',
               }}>
-              Lwarter, você tem dois minutos para responder cada pergunta.
-              Depois desse tempo, se não tiver respondido, a resposta vai ser
-              considerada incorreta.
+              You have two minutes to answer each question.
+              After that time, if you have not answered, your answer will be
+              considered incorrect.
             </Typography>
             <Typography
               sx={{
@@ -266,9 +253,9 @@ function QuestionsPage({
                 color: '#293591',
                 textAlign: 'center',
               }}>
-              Para cada resposta certa, você recebe 20 pontos. Se errar, não
-              pontua. Pense bem antes de responder, cada questão só pode ser
-              respondida uma vez.
+              For each correct answer, you get 20 points. If you get it wrong, you
+              points. Think well before answering, each question can only be answered once.
+              answered only once.
             </Typography>
             <Typography
               sx={{
@@ -278,7 +265,7 @@ function QuestionsPage({
                 textAlign: 'center',
                 fontWeight: 'bold',
               }}>
-              Vamos aprender e nos divertir?
+              Let&apos;s learn and have fun?
             </Typography>
             <button
               onClick={() => {
@@ -287,7 +274,7 @@ function QuestionsPage({
               }}
               className='main-button'
               style={{ width: '280px' }}>
-              Começar
+              Start
             </button>
           </Box>
         </Box>
@@ -331,7 +318,7 @@ function QuestionsPage({
             sx={{
               color: '#fff',
               fontSize: '60px',
-              fontFamily: 'Gameplay',
+
               textTransform: 'uppercase',
               textAlign: { xs: 'center', lg: 'left' },
               textShadow: '4px 8px 0px #2A3690',
@@ -376,11 +363,11 @@ function QuestionsPage({
             sx={{
               color: '#293591',
               fontSize: '18px',
-              fontFamily: 'Gameplay',
+
               textTransform: 'uppercase',
               fontWeight: 'bold',
             }}>
-            Questão {questionNumber} de 10
+            Question {questionNumber} of 10
           </Typography>
         </Box>
         <Box

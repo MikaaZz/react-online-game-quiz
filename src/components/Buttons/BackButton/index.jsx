@@ -10,7 +10,7 @@ function BackButton() {
           alt=''
           style={{ marginRight: '8px', width: '40px' }}
         />
-        Voltar
+        Return
       </button>
     </Link>
   )

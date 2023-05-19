@@ -49,7 +49,7 @@ function FinalConquest() {
             textAlign: { xs: 'center', lg: 'left' },
             textShadow: '4px 8px 0px #2A3690',
             zIndex: '10',
-            fontFamily: 'Gameplay',
+
             fontWeight: 'bold',
           }}>
           Conquistas

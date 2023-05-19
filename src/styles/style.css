@@ -1,12 +1,10 @@
-@font-face {
-  font-family: "Gameplay";
-  src: url('../fonts/FreePixel.ttf');
+* {
+  font-family: "poppins";
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Gameplay";
   font-weight: bold;
 }
 

@@ -4,7 +4,7 @@ function PointsDisplay({isDisponible}) {
 
   return (
     <Typography sx={{ color: 'white', fontFamily: 'poppins', }}>
-      {isDisponible ? '' : 'Para liberar'}
+      {isDisponible ? '' : 'To stay available'}
     </Typography>
   )
 }
